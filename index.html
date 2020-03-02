@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="udacity-grader" content="http://udacity.github.io/course-web-forms/lesson2/quizCustomValidity/grader/tests.json" libraries="jsgrader" unit-tests="http://udacity.github.io/course-web-forms/lesson2/quizCustomValidity/grader/unit_tests.js">
     <title>Quiz - setCustomValidity</title>
+    <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <h3>Create a new password</h3>
+    <div>
+        <h3>Create a new password</h3>
     <p>Password should meet the following requirements:</p>
     <ul>
         <li>16-100 characters (longer is better)</li>
@@ -20,13 +22,26 @@
     <!--
     Hmmm... there seem to be a few issues with the HTML... and something is definitely missing.
     -->
-    <label>
-        <input id="first" type="text" placeholder="New password" autofocus>
-    </label>
-    <label>
-        <input id="second" type="text" placeholder="Repeat password">
-    </label>
-    <input id="submit" type="submit">
+    <form action="" >
+        <label for="username">
+        <span>Username:</span>
+        <input name="username" id="username" autocomplete="username" placeholder="Enter your username" required minlength="8">
+        </label><br>
+        <label for="email">
+            <span>Email:</span>
+            <input type="email"id="email" name="email" placeholder="me@example.com" autocomplete="email" required>
+        </label><br>
+        <label for="first">
+            <span>Enter password:</span>
+            <input id="first" type="text" name="password" placeholder="New password" autofocus required autocomplete="current-password">
+        </label><br>
+        <label for="second">
+            <span>Confirm Password:</span>
+            <input id="second" type="text" name="passwordC" placeholder="Repeat password" required>
+        </label>
+        <input id="submit" type="submit">
+    </form>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
