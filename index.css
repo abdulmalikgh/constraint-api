@@ -29,3 +29,9 @@ input[type="submit"]{
 input[type="submit"]:focus,input[type="submit"]:hover,input[type="submit"]:active{
     border:2px solid red;
 }
+input.dirty:not(:focus):invalid{
+    border : 2px solid red;
+}
+input.dirty:not(:focus):valid{
+    border:2px solid green;
+}
